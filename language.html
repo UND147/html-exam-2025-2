@@ -643,7 +643,7 @@ FILE* <span class="function">fopen</span>(<span class="keyword">const char</span
         <!--HTML-->
         <div class="language-content" data-lang="html">
             <h1>HTML 요약<span class="badge">요점 정리 문법 요약</span></h1>
-            <p class="section-title">기본 HTML 문서 구조</p>
+            <p class="section-title">기본 HTML 문서 구조<br>대부분 시작태그와 종료태그로 구성</p>
             <div class="code-block">
                 <pre>&lt;!<span class="keyword">DOCTYPE</span> <span class="function">html</span>&gt;
 &lt;<span class="keyword">html</span> <span class="function">lang</span>=<span class="string">"en"</span>&gt;
@@ -657,12 +657,70 @@ FILE* <span class="function">fopen</span>(<span class="keyword">const char</span
 &lt;/<span class="keyword">body</span>&gt;
 &lt;/<span class="keyword">html</span>&gt;</pre>
             </div>
+            
+            <p class="section-title">주석문</p>
+            <div class="code-block">
+                <pre><span class="comment">&lt;!--이 부분은 주석문입니다. 웹 브라우저는 주석을 화면에 출력하지 않습니다.--&gt;</span></pre>
+            </div>
+
+            <p class="section-title">기본태그</p>
+            <div class="code-block">
+                <pre>&lt;<span class="keyword">title</span>&gt;브라우저의 타이틀 달기&lt;/<span class="keyword">title</span>&gt;
+&lt;<span class="keyword">h1</span>&gt;문단 제목 달기&lt;/<span class="keyword">h1</span>&gt;
+&lt;<span class="keyword">h2</span>&gt;&lt;/<span class="keyword">h2</span>&gt;
+&lt;<span class="keyword">h3</span>&gt;&lt;/<span class="keyword">h3</span>&gt;
+&lt;<span class="keyword">h4</span>&gt;&lt;/<span class="keyword">h4</span>&gt;
+&lt;<span class="keyword">h5</span>&gt;&lt;/<span class="keyword">h5</span>&gt;
+&lt;<span class="keyword">h6</span>&gt;가장 작은 크기&lt;/<span class="keyword">h6</span>&gt;
+&lt;<span class="keyword">p</span>&gt;단락 나누기&lt;/<span class="keyword">p</span>&gt;
+&lt;<span class="keyword">hr</span>&gt;수평선 긋기 <span class="comment">// 종료태그 없음</span>
+&lt;<span class="keyword">br</span>&gt;새로운 줄로 넘어가기</pre>
+            </div>
+
+            <p class="section-title">문자, 기호, 심볼 엔터티 표현</p>
+            <div class="code-block">
+                <pre>&quot; <span class="keyword">&</span><span class="keyword">quot;</span><span class="comment"> // quotation</span>
+&apos; <span class="keyword">&</span><span class="keyword">apos;</span><span class="comment"> // apostrophe</span>
+&lt; <span class="keyword">&</span><span class="keyword">lt;</span><span class="comment"> // less than</span>
+&gt; <span class="keyword">&</span><span class="keyword">gt;</span><span class="comment"> // greater than</span>
+&amp; <span class="keyword">&</span><span class="keyword">amp;</span><span class="comment"> // ampersand</span>
+빈칸 <span class="keyword">&</span><span class="keyword">nbsp;</span><span class="comment"> // no-break space</span>
+&pound; <span class="keyword">&</span><span class="keyword">pound;</span>
+&radic; <span class="keyword">&</span><span class="keyword">radic;</span>
+&infin; <span class="keyword">&</span><span class="keyword">infin;</span>
+&uarr; <span class="keyword">&</span><span class="keyword">uarr;</span>
+&divide; <span class="keyword">&</span><span class="keyword">divide;</span>
+&sum; <span class="keyword">&</span><span class="keyword">sum;</span>
+&copy; <span class="keyword">&</span><span class="keyword">copy;</span></pre>
+
+            </div>
         </div>
 
         <!--Javascript-->
         <div class="language-content" data-lang="javascript">
             <h1>JavaScript 요약<span class="badge">요점 정리 문법 요약</span></h1>
-            <p>JavaScript 내용</p>
+            <p class="section-title">JavaScript 코드 작성</p>
+            <div class="code-block">
+                <pre>&lt;<span class="keyword">script</span>&gt;&lt;/<span class="keyword">script</span>&gt;<span class="comment"> // head나 body 어디든 작성가능</span>
+&lt;<span class="keyword">script</span><span class="function"> src</span>=<span class="string">"파일이름.js"</span>&gt;&lt;/<span class="keyword">script</span>&gt;<span class="comment"> // 자바스크립트코드를 별도 파일에 작성</span>
+&lt;<span class="keyword">a</span><span class="function"> href</span>=<span class="string">"javascript:자바스크립트 코드"</span>&gt;링크&lt;/<span class="keyword">a</span>&gt;<span class="comment"> // URL 부분에 자바스크립트 코드 작성</span></pre>
+            </div>
+
+            <p class="section-title">데이터 타입</p>
+            <div class="code-block">
+                <pre>숫자타입, 논리타입, 문자열타입, 객체 레퍼런스타입, null, undefined
+<span class="keyword">var</span> x =<span class="number"> 1</span>;<span class="comment"> // 변수 x 선언</span>
+<span class="keyword">var</span> x =<span class="number"> 2</span>;<span class="comment"> // *var는 동일한 변수 재선언 가능</span>
+<span class="keyword">let</span> score;<span class="comment"> // 변수 score 선언</span>
+<span class="keyword">const</span> MAX =<span class="number"> 10</span>;<span class="comment"> // 10의 값을 가지는 상수 MAX 선언</span></pre>
+            </div>
+
+            <p class="section-title">다이얼로그 : 사용자 입력 및 메시지 출력</p>
+            <div class="code-block">
+                <pre><span class="keyword">prompt</span>(<span class="string">"메시지","디폴트 입력값"</span>);<span class="comment"> // 다이얼로그 출력 후 사용자로부터 문자열 입력&리턴</span>
+<span class="keyword">confirm</span>(<span class="string">"메시지"</span>);<span class="comment"> // 메시지와 함께 확인/취소 버튼 다이얼로그 출력</span>
+<span class="keyword">alert</span>(<span class="string">"메시지"</span>);<span class="comment"> // 다이얼로그 출력으로 단순 메시지 전달</span></pre>
+            </div>
         </div>
         <!--Java-->
         <div class="language-content" data-lang="java">
@@ -677,9 +735,27 @@ FILE* <span class="function">fopen</span>(<span class="keyword">const char</span
         <!--SQL-->
         <div class="language-content" data-lang="sql">
             <h1>SQL 요약<span class="badge">요점 정리 문법 요약</span></h1>
-            <p>SQL 내용</p>
+            <p class="section-title">SQL 분류</p>
+            <div class="code-block">
+                <pre><span class="string">DDL</span> CREATE / ALTER / DROP / RENAME / TRUNCATE<span class="comment"> // Data Definition Language</span>
+<span class="string">DML</span> INSERT / UPDATE / DELETE / SELECT / MERGE<span class="comment"> // Data Manipulation Language</span>
+<span class="string">DCL</span> GRANT / REVOKE<span class="comment"> // Data Control Language</span>
+<span class="string">TCL</span> COMMIT / ROLLBACK / SAVEPOINT<span class="comment"> // Transaction Control Language</span></pre>
+            </div>
+
+            <p class="section-title">SELECT문</p>
+            <div class="code-block">
+                <pre><span class="string">SELECT</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;(5) 지정된 칼럼을 조회하며
+<span class="string">FROM</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;(1) 테이블로부터
+<span class="string">WHERE</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;(2) 조건에 맞는 행을 필터링하고
+<span class="string">GROUP BY</span>&nbsp;&nbsp;&nbsp;&nbsp;(3) 그룹핑을 한 뒤
+<span class="string">HAVING</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;(4) 조건에 맞는 그룹만 필터링하고 (그룹별 집계함수 사용 가능)
+<span class="string">ORDER BY</span>&nbsp;&nbsp;&nbsp;&nbsp;(6) 정렬을 수행한다</pre>
+            </div>
+
         </div>
     </div>
+    
 
     <script>
         // 언어 탭 전환
