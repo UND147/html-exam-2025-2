@@ -153,6 +153,7 @@
         <a href="bookmark.html">북마크</a>
         <a href="language.html" class="active">언어요약</a>
         <a href="timetable.html">시간표</a>
+        <a href="forminfo.html">자료실</a>
     </nav>
 
     <nav id="language-nav">
@@ -751,6 +752,14 @@ FILE* <span class="function">fopen</span>(<span class="keyword">const char</span
 <span class="string">GROUP BY</span>&nbsp;&nbsp;&nbsp;&nbsp;(3) 그룹핑을 한 뒤
 <span class="string">HAVING</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;(4) 조건에 맞는 그룹만 필터링하고 (그룹별 집계함수 사용 가능)
 <span class="string">ORDER BY</span>&nbsp;&nbsp;&nbsp;&nbsp;(6) 정렬을 수행한다</pre>
+            </div>
+
+            <p class="section-title">문자함수</p>
+            <div class="code-block">
+                <pre><span class="function">LOWER</span>(<span class="number">arg</span>)<span class="comment"> // 입력된 문자열 모두 소문자 변환 반환</span>
+<span class="function">UPPER</span>(<span class="number">arg</span>)<span class="comment"> // 입력된 문자열 모두 대문자 변환 반환</span>
+<span class="function">CHR</span>(<span class="number">arg</span>)<span class="comment"> // 입력되는 ASCII 코드값에 대응하는 문자 반환</span>
+<span class="function">TRIM</span>([[<span class="number">arg1</span>][<span class="number">arg2</span>] FROM] <span class="number">arg3</span>)<span class="comment"> // 문자열의 양 끝단에서 공백 또는 지정 문자열 제거 반환 arg1: LEADING/TRAILING/BOTH, arg2: 제거할 특정 문자(열)</span></pre>
             </div>
 
         </div>
