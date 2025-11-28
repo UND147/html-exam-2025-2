@@ -89,7 +89,7 @@
     padding: 30px 40px;
     overflow-x: auto;
     margin: 0;
-    background: #121212;
+    background: transparent;
 }
 
 .timetable {
