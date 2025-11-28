@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>R1-A3-225230001-정주호</title>
+    <link rel="icon" href="img/favicon.ico">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/textrpg.css">
+</head>
+<body>
+    <header id="header">
+        <h1>DUICA A3</h1> <img src="img/donggukMark.png" alt="동국대 마크">
+        <div class="button-wrapper">
+            <a href="https://github.com/UND147/R1-A3-225230001-CHENGJUHO" target="_blank" data-tooltip="GitHub 저장소">
+                <img src="img/githubimg.png" alt="깃허브 이미지">
+            </a>
+            <a href="https://und147.github.io/R1-A3-225230001-CHENGJUHO/" target="_blank" data-tooltip="GitHub Pages">
+                <img src="img/gitimg.png" alt="깃사이트 이미지">
+            </a>
+        </div>
+        <div class="login-wrapper">
+            <input class="iText" type="text" name="user_id" placeholder="아이디">
+            <input class="iText" type="password" name="password" placeholder="암호">
+            <button type="submit">로그인</button>
+            <span class="hLine">
+                <a class="a" href="signupform.html">회원가입</a>
+            </span>
+        </div>
+    </header>
+
+    <!-- 네비게이션 -->
+    <nav>
+        <a href="index.html">홈</a>
+        <a href="attendance.html">출석체크</a>
+        <a href="bookmark.html">북마크</a>
+        <a href="language.html">언어요약</a>
+        <a href="timetable.html">시간표</a>
+        <a href="forminfo.html">자료실</a>
+        <a href="textrpg.html" class="active">텍스트게임</a>
+    </nav>
+
+    <!-- 게임 메인 -->
+    <div class="game-container">
+        <!-- 좌측: 플레이어 상태 -->
+        <div class="player-status">
+            <div class="status-header">플레이어 상태</div>
+            
+            <div class="player-image-wrapper">
+                <img src="img/defaultProfile.png" alt="플레이어" class="player-image" id="playerImage">
+            </div>
+
+            <div class="status-info">
+                <div class="status-item">
+                    <span class="status-label">레벨</span>
+                    <span class="status-value" id="playerLevel">1</span>
+                </div>
+                
+                <div class="status-item">
+                    <span class="status-label">경험치</span>
+                    <div class="exp-bar-container">
+                        <div class="exp-bar" id="expBar"></div>
+                        <span class="exp-text" id="expText">0 / 100</span>
+                    </div>
+                </div>
+
+                <div class="status-item">
+                    <span class="status-label">처치 수</span>
+                    <span class="status-value" id="killCount">0</span>
+                </div>
+
+                <div class="status-item">
+                    <span class="status-label">총 데미지</span>
+                    <span class="status-value" id="totalDamage">0</span>
+                </div>
+            </div>
+
+            <button class="reset-btn" onclick="resetGame()">게임 초기화</button>
+        </div>
+
+        <!-- 중앙: 전투 로그 -->
+        <div class="battle-area">
+            <div class="battle-header">전투 로그</div>
+            
+            <div class="log-container" id="logContainer">
+                <div class="log-message welcome">🎮 텍스트 RPG에 오신 것을 환영합니다!</div>
+                <div class="log-message info">탐험을 시작하여 몬스터를 처치하세요.</div>
+                <div class="log-message info">몬스터는 100HP를 가지고 있습니다.</div>
+                <div class="log-message info">공격 시 1~50의 랜덤 데미지를 입힙니다.</div>
+            </div>
+
+            <div class="button-area">
+                <button class="game-btn start-btn" id="startBtn" onclick="startAdventure()">
+                    🗺️ 탐험 시작
+                </button>
+                <button class="game-btn attack-btn" id="attackBtn" onclick="attack()" disabled>
+                    ⚔️ 공격
+                </button>
+            </div>
+        </div>
+
+        <!-- 우측: 몬스터 상태 -->
+        <div class="monster-status">
+            <div class="status-header">반야관 던전</div>
+            
+            <div class="monster-display" id="monsterDisplay">
+                <div class="no-monster">❓</div>
+                <div class="no-monster-text">몬스터가 없습니다</div>
+            </div>
+
+            <div class="monster-info" id="monsterInfo" style="display: none;">
+                <div class="monster-image-wrapper">
+                    <img src="img/monsters/default.png" alt="몬스터" class="monster-image" id="monsterImage">
+                </div>
+                
+                <div class="monster-name" id="monsterName">알고몬</div>
+                
+                <div class="hp-bar-container">
+                    <div class="hp-bar" id="monsterHpBar"></div>
+                    <span class="hp-text" id="monsterHpText">100 / 100</span>
+                </div>
+
+                <div class="monster-stats">
+                    <div class="stat-item">
+                        <span class="stat-icon">❤️</span>
+                        <span id="monsterCurrentHp">100</span> / <span id="monsterMaxHp">100</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="js/navigation.js"></script>
+    <script src="js/textrpg.js"></script>
+</body>
+</html>

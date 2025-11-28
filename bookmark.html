@@ -6,31 +6,11 @@
     <title>R1-A3-225230001-정주호</title>
     <link rel="icon" href="img/favicon.ico">
     <link rel="stylesheet" href="css/style.css">
-    <style>
-        .iframe-wrapper {
-            display: flex; /* 자식 요소(iframe)를 좌우로 나란히 배치 */
-            height: calc(100vh - 122px - 15px); 
-            padding: 20px 40px 0 40px; /* 상단: 20px, 좌우: 40px 여백 (좌우 화면 꽉 채우기 목적) */
-            gap: 20px; /* iframe 사이에 20px 간격 추가 */
-            background: #121212; /* body와 동일한 배경색 적용 */
-        }
-        .iframe-wrapper iframe { 
-            height: 100%;
-            border: 1px solid #2a2a2a; /* 기존 헤더/네비게이션 border와 유사한 스타일 */
-            border-radius: 1%; /* 기존 인라인 스타일 유지 */
-        }
-        .iframe-wrapper iframe[name="left"] {
-            flex-basis: 35%; 
-            flex-grow: 0; /* 35%로 고정 */
-        }
-        .iframe-wrapper iframe[name="right"] {
-            flex-basis: 65%;
-            flex-grow: 1; /* 남은 공간을 채우고, 35:65 비율 유지 */
-        }
-    </style>
+</head>
 <body>
     <header id="header">
-        <h1>DUICA A3</h1> <img src="img/donggukMark.png" alt="동국대 마크">
+        <h1>DUICA A3</h1>
+        <img src="img/donggukMark.png" alt="동국대 마크">
         <div class="button-wrapper">
             <a href="https://github.com/UND147/R1-A3-225230001-CHENGJUHO" target="_blank" data-tooltip="GitHub 저장소">
                 <img src="img/githubimg.png" alt="깃허브 이미지">
@@ -48,26 +28,74 @@
             </span>
         </div>
     </header>
-    <!-- 네비게이션 -->
+
     <nav>
-        <a href="index.html" class="active" target="_self">홈</a>
+        <a href="index.html" target="_self">홈</a>
         <a href="attendance.html">출석체크</a>
-        <a href="bookmark.html">북마크</a>
+        <a href="bookmark.html" class="active">북마크</a>
         <a href="language.html">언어요약</a>
         <a href="timetable.html">시간표</a>
         <a href="forminfo.html">자료실</a>
     </nav>
-    <p></p>
-    <div class="iframe-wrapper">
-        <iframe src="leftframe.html"
-            name="left">
+
+    <div class="bookmark-wrapper">
+        <!-- 좌측 북마크 메뉴 -->
+        <aside class="bookmark-menu">
+            <button class="bookmark-button" data-url="http://www.ducsi.ac.kr/Ducsi/ducsi_new/community/notice_list.jsp">🏫 듀이카 홈페이지</button>
+            <button class="bookmark-button" data-url="https://www.cb.or.kr/creditbank/base/nMain.do">🎓 학점은행제 홈페이지</button>
+            <button class="bookmark-button" data-url="https://www.gunsys.com/gunsystem_pilgi.htm">📝 건시스템 CBT 필기</button>
+            <button class="bookmark-button" data-url="https://solved.ac/">💻 알고리즘 문제풀기</button>
+            <button class="bookmark-button" data-url="https://rgbcolorpicker.com/">🎨 RGB값 구하기</button>
+            <button class="bookmark-button" data-url="https://dict.naver.com/">📚 네이버 사전</button>
+            <button class="bookmark-button" data-url="https://nara-speller.co.kr/speller/">✏️ 맞춤법 검사</button>
             
-        </iframe>
-    <iframe src="rightframe.html"
-            name="right">
-            
-    </iframe>
+            <h3>사이버강의실 바로가기 > 로그인 후 한번 더 클릭</h3>
+            <button class="bookmark-button" data-url="http://www.ducsi.ac.kr/Ducsi/ducsi_new/undergraduate/cyber_data.jsp?page=1&flag=mpboard&mode=W&keyword=&CID=&proid=&pronm=%EC%9C%A4%EC%84%B1%EB%A6%BC&sabun=20053004&userid=yslhappy" 
+                    data-target="_blank">👨‍🏫 윤성림교수님 사이버강의실 바로가기</button>
+            <button class="bookmark-button" data-url="http://www.ducsi.ac.kr/Ducsi/ducsi_new/undergraduate/cyber_data.jsp?page=1&flag=mpboard&mode=W&keyword=&CID=&proid=&pronm=%EA%B0%95%ED%98%B8%EC%84%9D&sabun=20252001&userid=hsriver"      
+                    data-target="_blank">👨‍🏫 강호석교수님 사이버강의실 바로가기</button>
+            <button class="bookmark-button" data-url="http://www.ducsi.ac.kr/Ducsi/ducsi_new/undergraduate/cyber_data.jsp?page=1&flag=mpboard&mode=W&keyword=&CID=&proid=&pronm=%ED%95%9C%EC%9D%B8&sabun=20172005&userid=ihan8548" 
+                    data-target="_blank">👨‍🏫 한인교수님 사이버강의실 바로가기</button>
+            <button class="bookmark-button" data-url="http://www.ducsi.ac.kr/Ducsi/ducsi_new/undergraduate/cyber_data.jsp?page=1&flag=mpboard&mode=W&keyword=&CID=&proid=&pronm=%EA%B9%80%EB%B3%B4%EC%9B%90&sabun=20002001&userid=bwkim" 
+                    data-target="_blank">👨‍🏫 김보원교수님 사이버강의실 바로가기</button>
+            <button class="bookmark-button" data-url="http://www.ducsi.ac.kr/Ducsi/ducsi_new/undergraduate/cyber_data.jsp?page=1&flag=mpboard&mode=W&keyword=&CID=&proid=&pronm=%EC%9D%B4%ED%98%95%EC%88%99&sabun=20243002&userid=veca777" 
+                    data-target="_blank">👨‍🏫 이형숙교수님 사이버강의실 바로가기</button>
+            <button class="bookmark-button" data-url="http://www.ducsi.ac.kr/Ducsi/ducsi_new/undergraduate/cyber_data.jsp?page=1&flag=mpboard&mode=W&keyword=&CID=&proid=&pronm=%EA%B9%80%EC%A7%80%EC%97%B0&sabun=20173016&userid=jykim429" 
+                    data-target="_blank">👨‍🏫 김지연교수님 사이버강의실 바로가기</button>
+        </aside>
+
+        <!-- 우측 웹사이트 표시 영역 -->
+        <main class="bookmark-content">
+            <iframe id="bookmark-iframe" name="bookmark-iframe"></iframe>
+            <div id="bookmark-placeholder">
+                <p>🔖</p>
+                <p>왼쪽 메뉴에서 북마크를 선택하세요</p>
+            </div>
+        </main>
     </div>
-<script src="js/navigation.js"></script> 
+
+    <script>
+        document.querySelectorAll('.bookmark-button').forEach(button => {
+            button.addEventListener('click', function() {
+                const targetUrl = this.getAttribute('data-url');
+                const customTarget = this.getAttribute('data-target');
+                
+                // 새 창으로 열기
+                if (customTarget === '_blank') {
+                    window.open(targetUrl, '_blank');
+                    return; 
+                }
+                
+                // iframe에 로드
+                const iframe = document.getElementById('bookmark-iframe');
+                const placeholder = document.getElementById('bookmark-placeholder');
+                
+                iframe.src = targetUrl;
+                placeholder.style.display = 'none';
+                iframe.style.display = 'block';
+            });
+        });
+    </script>
+    <script src="js/navigation.js"></script>
 </body>
 </html>

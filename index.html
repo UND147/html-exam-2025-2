@@ -7,17 +7,6 @@
     <link rel="icon" href="img/favicon.ico">
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/cardstyle.css">
-    <style>
-        /* 메인 컨텐츠 */
-        main {
-            display: flex;
-            justify-content: center;
-            align-items: flex-start;
-            padding: 50px 0;
-            position: relative;
-            overflow: hidden;
-        }
-    </style>
 </head>
 <body>
     <!-- 헤더 -->
@@ -48,30 +37,23 @@
         <a href="language.html">언어요약</a>
         <a href="timetable.html">시간표</a>
         <a href="forminfo.html">자료실</a>
+        <a href="textrpg.html" class="active">텍스트게임</a>
     </nav>
     <!-- 메인 컨텐츠 -->
-    <main>
+    <main class="index-main">
         <div class="card-wrapper">
             <!-- 배경 코드 -->
             <div class="code-background">
-                <div class="code-line"><span class="keyword">const</span> student = {</div>
+                <div class="code-line"><span class="keyword">let</span> student = {</div>
                 <div class="code-line">  name: <span class="string">"정주호 JuhoCheng 鄭朱皓"</span>,</div>
-                <div class="code-line">  id: <span class="string">"225230001"</span>,</div>
+                <div class="code-line">  studentId: <span class="string">"225230001"</span>,</div>
                 <div class="code-line">  department: <span class="string">"컴퓨터공학과"</span>,</div>
-                <div class="code-line">  university: <span class="string">"동국대학교 듀이카"</span>,</div>
-                <div class="code-line">  year: <span class="string">2025</span>,</div>
-                <div class="code-line">  status: <span class="string">"active"</span></div>
-                <div class="code-line">  received credits <span class="string"></span></div>
-                <div class="code-line">  &nbsp;&nbsp;&nbsp;major: <span class="string">"0"</span></div>
-                <div class="code-line">  &nbsp;&nbsp;&nbsp;liberal arts: <span class="string">"36"</span></div>
-                <div class="code-line">  &nbsp;&nbsp;&nbsp;general electives: <span class="string">"55"</span></div>
+                <div class="code-line">  year: <span class="number">2025</span>,</div>
+                <div class="code-line">  credits: { major: <span class="number">0</span>, liberal: <span class="number">36</span>, elective: <span class="number">55</span> }</div>
                 <div class="code-line">};</div>
-                <div class="code-line"><span class="keyword">const</span> browser = <span class="string" id="info-browser">""</span>;</div>
-                <div class="code-line"><span class="keyword">const</span> version = <span class="string" id="info-version">""</span>;</div>
-                <div class="code-line"><span class="keyword">const</span> os = <span class="string" id="info-os">""</span>;</div>
-                <div class="code-line"><span class="keyword">const</span> device = <span class="string" id="info-device">""</span>;</div>
-                <div class="code-line"></div>
-                <div class="code-line"><span class="comment">// Student verification system</span></div>
+                <div class="code-line"><span class="keyword">let</span> browser = <span class="string" id="info-browser">""</span>;</div>
+                <div class="code-line"><span class="keyword">let</span> os = <span class="string" id="info-os">""</span>;</div>
+                <div class="code-line"><span class="keyword">let</span> device = <span class="string" id="info-device">""</span>;</div>
             </div>
             <!-- 카드 컨테이너 -->
             <div class="card-container">
@@ -104,14 +86,8 @@
   function isMobile() {
     return /android|iphone|ipad|mobile/.test(ua);
   }
-  // 브라우저 버전 추출
-  function getVersion() {
-    const match = navigator.userAgent.match(/(chrome|firefox|edg|safari)\/([\d.]+)/i);
-    return match ? match[2] : "Unknown";
-  }
   // 각각의 span에 할당
   document.getElementById("info-browser").textContent = `"${getBrowser()}"`;
-  document.getElementById("info-version").textContent = `"${getVersion()}"`;
   document.getElementById("info-os").textContent = `"${getOS()}"`;
   document.getElementById("info-device").textContent = `"${isMobile() ? "Mobile" : "Desktop"}"`;
 </script>
