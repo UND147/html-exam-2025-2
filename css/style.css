@@ -1,6 +1,9 @@
 /* ==========================================
    기본 스타일 (Body & Scrollbar)
    ========================================== */
+html {
+    background: #262626;  /* 그라데이션 끝 색상과 동일 */
+}
 body {
     font-family: 'Pretendard', -apple-system, BlinkMacSystemFont, 'Apple SD Gothic Neo', 'Malgun Gothic', sans-serif;
     --featured-img: linear-gradient(180deg,#fff,#262626);
@@ -8,7 +11,8 @@ body {
     background-position: top 58px center;
     background-repeat: no-repeat;
     background-image: radial-gradient(50% 50% at top center,rgba(0,0,0,.66),#262626),var(--featured-img);
-    background-size: 120% 2000px,100% 2000px;
+    background-size: 120% 100%, 100% 100%;
+    background-attachment: fixed;
     color: #ffffff;
     margin: 0;
     overflow-y: scroll;
@@ -44,6 +48,9 @@ body {
     justify-content: space-between;
     font-size: 12px;
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3); 
+    position: sticky;
+    top: 0;
+    z-index: 101;
 }
 
 #header h1 {
@@ -230,6 +237,9 @@ nav {
     display: flex;
     gap: 8px;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    position: sticky;
+    top: 0;
+    z-index: 100;
 }
 
 nav a {
