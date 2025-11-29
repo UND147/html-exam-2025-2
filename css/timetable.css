@@ -2,546 +2,546 @@
    버튼 영역
    ========================================== */
 .button-area {
-    background: #1e1e1e;
-    padding: 8px 40px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    gap: 10px;
-    border-bottom: 1px solid #2a2a2a;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
-    height: 50px;
-    min-height: 50px;
-    max-height: 50px;
-    box-sizing: border-box;
+  background: #1e1e1e;
+  padding: 8px 40px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 10px;
+  border-bottom: 1px solid #2a2a2a;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+  height: 50px;
+  min-height: 50px;
+  max-height: 50px;
+  box-sizing: border-box;
 }
 
 .button-area h3 {
-    font-size: 12px;
-    margin: 0;
-    padding: 0;
-    color: #9ca3af;
-    font-weight: 500;
-    line-height: 1.2;
-    flex-shrink: 0;
+  font-size: 12px;
+  margin: 0;
+  padding: 0;
+  color: #9ca3af;
+  font-weight: 500;
+  line-height: 1.2;
+  flex-shrink: 0;
 }
 
 .button-area .button-group {
-    display: flex;
-    gap: 10px;
-    align-items: center;
-    flex-shrink: 0;
-    margin: 0;
-    padding: 0;
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  flex-shrink: 0;
+  margin: 0;
+  padding: 0;
 }
 
 /* 버튼 영역 내의 버튼만 스타일 적용 */
 .button-area .btn {
-    padding: 7px 16px;
-    margin: 0;
-    border: none;
-    border-radius: 8px;
-    font-size: 13px;
-    font-weight: 500;
-    cursor: pointer;
-    transition: all 0.3s ease;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
-    height: 34px;
-    line-height: 1.2;
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    white-space: nowrap;
-    box-sizing: border-box;
+  padding: 7px 16px;
+  margin: 0;
+  border: none;
+  border-radius: 8px;
+  font-size: 13px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+  height: 34px;
+  line-height: 1.2;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  white-space: nowrap;
+  box-sizing: border-box;
 }
 
 .btn:hover {
-    transform: translateY(-2px);
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
 }
 
 .btn:active {
-    transform: translateY(0);
+  transform: translateY(0);
 }
 
 .btn-subject {
-    background: #3b82f6;
-    color: white;
+  background: #3b82f6;
+  color: white;
 }
 
 .btn-subject:hover {
-    background: #2563eb;
+  background: #2563eb;
 }
 
 .btn-todo {
-    background: #ef4444;
-    color: white;
+  background: #ef4444;
+  color: white;
 }
 
 .btn-todo:hover {
-    background: #dc2626;
+  background: #dc2626;
 }
 
 /* ==========================================
    시간표 컨테이너
    ========================================== */
 .timetable-container {
-    padding: 30px 40px;
-    overflow-x: auto;
-    margin: 0;
-    background: transparent;
+  padding: 30px 40px;
+  overflow-x: auto;
+  margin: 0;
+  background: transparent;
 }
 
 .timetable {
-    border-collapse: collapse;
-    min-width: 1000px;
-    width: 100%;
-    max-width: 1400px;
-    margin: 0 auto;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
-    border-radius: 8px;
-    overflow: hidden;
+  border-collapse: collapse;
+  min-width: 1000px;
+  width: 100%;
+  max-width: 1400px;
+  margin: 0 auto;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+  border-radius: 8px;
+  overflow: hidden;
 }
 
 .timetable th,
 .timetable td {
-    border: 1px solid #2a2a2a;
-    text-align: center;
+  border: 1px solid #2a2a2a;
+  text-align: center;
 }
 
 /* ==========================================
    헤더
    ========================================== */
 .timetable th {
-    background: #262626;
-    color: #9ca3af;
-    font-size: 13px;
-    font-weight: 600;
-    height: 45px;
-    text-transform: uppercase;
-    letter-spacing: 0.5px;
+  background: #262626;
+  color: #9ca3af;
+  font-size: 13px;
+  font-weight: 600;
+  height: 45px;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
 }
 
 .timetable th.day-header {
-    color: #ffffff;
-    background: linear-gradient(to bottom, #2a2a2a 0%, #262626 100%);
+  color: #ffffff;
+  background: linear-gradient(to bottom, #2a2a2a 0%, #262626 100%);
 }
 
 /* ==========================================
    시간 열
    ========================================== */
 .time-cell {
-    background: #1a1a1a;
-    width: 80px;
-    height: 60px;
-    vertical-align: middle;
-    border-right: 2px solid #3b82f6;
+  background: #1a1a1a;
+  width: 80px;
+  height: 60px;
+  vertical-align: middle;
+  border-right: 2px solid #3b82f6;
 }
 
 .time-label {
-    font-size: 12px;
-    color: #9ca3af;
-    font-weight: 600;
+  font-size: 12px;
+  color: #9ca3af;
+  font-weight: 600;
 }
 
 .time-value {
-    font-size: 10px;
-    color: #6b7280;
-    margin-top: 4px;
+  font-size: 10px;
+  color: #6b7280;
+  margin-top: 4px;
 }
 
 /* ==========================================
    빈 셀
    ========================================== */
 .empty-cell {
-    background: #1e1e1e;
-    width: 180px;
-    height: 60px;
-    cursor: pointer;
-    transition: all 0.3s ease;
-    position: relative;
+  background: #1e1e1e;
+  width: 180px;
+  height: 60px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  position: relative;
 }
 
 .empty-cell:hover {
-    background: #2a2a2a;
-    box-shadow: inset 0 0 0 2px #3b82f6;
+  background: #2a2a2a;
+  box-shadow: inset 0 0 0 2px #3b82f6;
 }
 
 .empty-cell:hover::after {
-    content: '+';
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    font-size: 24px;
-    color: #3b82f6;
-    font-weight: 300;
+  content: "+";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 24px;
+  color: #3b82f6;
+  font-weight: 300;
 }
 
 /* ==========================================
    과목 셀
    ========================================== */
 .subject-cell {
-    width: 180px;
-    height: 60px;
-    padding: 10px;
-    cursor: pointer;
-    position: relative;
-    transition: all 0.3s ease;
-    box-shadow: inset 0 0 0 1px rgba(0, 0, 0, 0.1);
+  width: 180px;
+  height: 60px;
+  padding: 10px;
+  cursor: pointer;
+  position: relative;
+  transition: all 0.3s ease;
+  box-shadow: inset 0 0 0 1px rgba(0, 0, 0, 0.1);
 }
 
 .subject-cell:hover {
-    transform: scale(1.03);
-    z-index: 10;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4);
+  transform: scale(1.03);
+  z-index: 10;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4);
 }
 
 .subject-name {
-    font-size: 14px;
-    font-weight: 600;
-    margin-bottom: 4px;
-    overflow: hidden;
-    text-overflow: ellipsis;
-    white-space: nowrap;
+  font-size: 14px;
+  font-weight: 600;
+  margin-bottom: 4px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
 }
 
 .subject-info {
-    font-size: 11px;
-    opacity: 0.9;
-    overflow: hidden;
-    text-overflow: ellipsis;
-    white-space: nowrap;
+  font-size: 11px;
+  opacity: 0.9;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
 }
 
 /* ==========================================
    과목 색상 (파스텔 톤 개선)
    ========================================== */
 .subject-blue {
-    background: linear-gradient(135deg, #93c5fd 0%, #7fa8c9 100%);
-    border: 1px solid #5a8aaf;
+  background: linear-gradient(135deg, #93c5fd 0%, #7fa8c9 100%);
+  border: 1px solid #5a8aaf;
 }
 
 .subject-blue .subject-name,
 .subject-blue .subject-info {
-    color: #1e293b;
+  color: #1e293b;
 }
 
 .subject-purple {
-    background: linear-gradient(135deg, #c4b5fd 0%, #b19cd9 100%);
-    border: 1px solid #9278bf;
+  background: linear-gradient(135deg, #c4b5fd 0%, #b19cd9 100%);
+  border: 1px solid #9278bf;
 }
 
 .subject-purple .subject-name,
 .subject-purple .subject-info {
-    color: #1e293b;
+  color: #1e293b;
 }
 
 .subject-green {
-    background: linear-gradient(135deg, #86efac 0%, #a8d5ba 100%);
-    border: 1px solid #88b59a;
+  background: linear-gradient(135deg, #86efac 0%, #a8d5ba 100%);
+  border: 1px solid #88b59a;
 }
 
 .subject-green .subject-name,
 .subject-green .subject-info {
-    color: #1e293b;
+  color: #1e293b;
 }
 
 .subject-pink {
-    background: linear-gradient(135deg, #fbcfe8 0%, #f8b4d9 100%);
-    border: 1px solid #e89ac4;
+  background: linear-gradient(135deg, #fbcfe8 0%, #f8b4d9 100%);
+  border: 1px solid #e89ac4;
 }
 
 .subject-pink .subject-name,
 .subject-pink .subject-info {
-    color: #1e293b;
+  color: #1e293b;
 }
 
 .subject-mint {
-    background: linear-gradient(135deg, #99f6e4 0%, #a0e7e5 100%);
-    border: 1px solid #7dd3d1;
+  background: linear-gradient(135deg, #99f6e4 0%, #a0e7e5 100%);
+  border: 1px solid #7dd3d1;
 }
 
 .subject-mint .subject-name,
 .subject-mint .subject-info {
-    color: #1e293b;
+  color: #1e293b;
 }
 
 /* ==========================================
    Todo 색상
    ========================================== */
 .todo-cell {
-    background: linear-gradient(135deg, #f87171 0%, #ef4444 100%);
-    border: 1px solid #dc2626;
+  background: linear-gradient(135deg, #f87171 0%, #ef4444 100%);
+  border: 1px solid #dc2626;
 }
 
 .todo-cell .subject-name,
 .todo-cell .subject-info {
-    color: #ffffff;
-    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
+  color: #ffffff;
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
 }
 
 /* ==========================================
    점심시간
    ========================================== */
 .lunch-cell {
-    background: linear-gradient(to right, #262626 0%, #2a2a2a 50%, #262626 100%);
-    height: 50px;
-    border-top: 2px solid #3b82f6;
-    border-bottom: 2px solid #3b82f6;
+  background: linear-gradient(to right, #262626 0%, #2a2a2a 50%, #262626 100%);
+  height: 50px;
+  border-top: 2px solid #3b82f6;
+  border-bottom: 2px solid #3b82f6;
 }
 
 .lunch-label {
-    font-size: 11px;
-    color: #9ca3af;
-    font-weight: 600;
-    letter-spacing: 1px;
+  font-size: 11px;
+  color: #9ca3af;
+  font-weight: 600;
+  letter-spacing: 1px;
 }
 
 /* ==========================================
    구분선
    ========================================== */
 .separator-row td {
-    border: none;
-    padding: 15px 0;
-    background: #121212;
+  border: none;
+  padding: 15px 0;
+  background: #121212;
 }
 
 .separator-line {
-    width: 100%;
-    height: 3px;
-    background: linear-gradient(
-        to right,
-        transparent 0%,
-        #3b82f6 20%,
-        #3b82f6 80%,
-        transparent 100%
-    );
-    border-radius: 2px;
-    box-shadow: 0 2px 8px rgba(59, 130, 246, 0.3);
+  width: 100%;
+  height: 3px;
+  background: linear-gradient(
+    to right,
+    transparent 0%,
+    #3b82f6 20%,
+    #3b82f6 80%,
+    transparent 100%
+  );
+  border-radius: 2px;
+  box-shadow: 0 2px 8px rgba(59, 130, 246, 0.3);
 }
 
 /* ==========================================
    모달
    ========================================== */
 .modal {
-    display: none;
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: rgba(0, 0, 0, 0.85);
-    backdrop-filter: blur(4px);
-    z-index: 1000;
-    justify-content: center;
-    align-items: center;
-    animation: modalFadeIn 0.3s ease;
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.85);
+  backdrop-filter: blur(4px);
+  z-index: 1000;
+  justify-content: center;
+  align-items: center;
+  animation: modalFadeIn 0.3s ease;
 }
 
 @keyframes modalFadeIn {
-    from {
-        opacity: 0;
-    }
-    to {
-        opacity: 1;
-    }
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
 }
 
 .modal.active {
-    display: flex;
+  display: flex;
 }
 
 .modal-content {
-    background: #1e1e1e;
-    border-radius: 12px;
-    padding: 30px;
-    width: 90%;
-    max-width: 500px;
-    border: 1px solid #2a2a2a;
-    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.5);
-    animation: modalSlideUp 0.3s ease;
+  background: #1e1e1e;
+  border-radius: 12px;
+  padding: 30px;
+  width: 90%;
+  max-width: 500px;
+  border: 1px solid #2a2a2a;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.5);
+  animation: modalSlideUp 0.3s ease;
 }
 
 @keyframes modalSlideUp {
-    from {
-        transform: translateY(30px);
-        opacity: 0;
-    }
-    to {
-        transform: translateY(0);
-        opacity: 1;
-    }
+  from {
+    transform: translateY(30px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
 }
 
 .modal-header {
-    font-size: 22px;
-    font-weight: 600;
-    margin-bottom: 25px;
-    color: #ffffff;
-    padding-bottom: 15px;
-    border-bottom: 2px solid #3b82f6;
+  font-size: 22px;
+  font-weight: 600;
+  margin-bottom: 25px;
+  color: #ffffff;
+  padding-bottom: 15px;
+  border-bottom: 2px solid #3b82f6;
 }
 
 /* ==========================================
    폼 요소
    ========================================== */
 .form-group {
-    margin-bottom: 20px;
+  margin-bottom: 20px;
 }
 
 .form-group label {
-    display: block;
-    font-size: 14px;
-    color: #d1d5db;
-    margin-bottom: 8px;
-    font-weight: 500;
+  display: block;
+  font-size: 14px;
+  color: #d1d5db;
+  margin-bottom: 8px;
+  font-weight: 500;
 }
 
 /* fieldset 스타일 */
 fieldset.form-group {
-    border: 1px solid #3a3a3a;
-    border-radius: 8px;
-    padding: 20px;
-    margin-bottom: 20px;
-    background: #1a1a1a;
+  border: 1px solid #3a3a3a;
+  border-radius: 8px;
+  padding: 20px;
+  margin-bottom: 20px;
+  background: #1a1a1a;
 }
 
 fieldset.form-group legend {
-    font-size: 14px;
-    color: #d1d5db;
-    padding: 0 10px;
-    font-weight: 600;
+  font-size: 14px;
+  color: #d1d5db;
+  padding: 0 10px;
+  font-weight: 600;
 }
 
 .form-group input,
 .form-group select {
-    width: 100%;
-    padding: 12px 14px;
-    background: #262626;
-    border: 1px solid #3a3a3a;
-    border-radius: 8px;
-    color: #ffffff;
-    font-size: 14px;
-    transition: all 0.3s ease;
-    box-sizing: border-box;
+  width: 100%;
+  padding: 12px 14px;
+  background: #262626;
+  border: 1px solid #3a3a3a;
+  border-radius: 8px;
+  color: #ffffff;
+  font-size: 14px;
+  transition: all 0.3s ease;
+  box-sizing: border-box;
 }
 
 .form-group input:focus,
 .form-group select:focus {
-    outline: none;
-    border-color: #3b82f6;
-    box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.1);
-    background: #1a1a1a;
+  outline: none;
+  border-color: #3b82f6;
+  box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.1);
+  background: #1a1a1a;
 }
 
 /* ==========================================
    체크박스 그룹
    ========================================== */
 .checkbox-group {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 10px;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 10px;
 }
 
 .checkbox-label {
-    display: flex;
-    align-items: center;
-    gap: 10px;
-    padding: 12px 15px;
-    background: #262626;
-    border: 2px solid #3a3a3a;
-    border-radius: 8px;
-    cursor: pointer;
-    transition: all 0.3s ease;
-    color: #9ca3af;
-    font-size: 13px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 12px 15px;
+  background: #262626;
+  border: 2px solid #3a3a3a;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  color: #9ca3af;
+  font-size: 13px;
 }
 
 .checkbox-label:hover {
-    background: #2d2d2d;
-    border-color: #4b5563;
-    transform: translateX(2px);
+  background: #2d2d2d;
+  border-color: #4b5563;
+  transform: translateX(2px);
 }
 
 .checkbox-label input[type="checkbox"] {
-    width: 18px;
-    height: 18px;
-    cursor: pointer;
-    accent-color: #3b82f6;
-    margin: 0;
+  width: 18px;
+  height: 18px;
+  cursor: pointer;
+  accent-color: #3b82f6;
+  margin: 0;
 }
 
 .checkbox-label:has(input[type="checkbox"]:checked) {
-    background: linear-gradient(135deg, #1e3a5f 0%, #1e40af 100%);
-    border-color: #3b82f6;
-    color: #ffffff;
-    font-weight: 600;
-    box-shadow: 0 2px 8px rgba(59, 130, 246, 0.3);
+  background: linear-gradient(135deg, #1e3a5f 0%, #1e40af 100%);
+  border-color: #3b82f6;
+  color: #ffffff;
+  font-weight: 600;
+  box-shadow: 0 2px 8px rgba(59, 130, 246, 0.3);
 }
 
 /* ==========================================
    모달 버튼
    ========================================== */
 .modal-buttons {
-    display: flex;
-    gap: 12px;
-    justify-content: flex-end;
-    margin-top: 30px;
+  display: flex;
+  gap: 12px;
+  justify-content: flex-end;
+  margin-top: 30px;
 }
 
 .btn-cancel {
-    background: #4b5563;
-    color: white;
+  background: #4b5563;
+  color: white;
 }
 
 .btn-cancel:hover {
-    background: #374151;
+  background: #374151;
 }
 
 .btn-save {
-    background: #3b82f6;
-    color: white;
+  background: #3b82f6;
+  color: white;
 }
 
 .btn-save:hover {
-    background: #2563eb;
+  background: #2563eb;
 }
 
 /* ==========================================
    반응형
    ========================================== */
 @media (max-width: 1200px) {
-    .timetable {
-        min-width: 900px;
-    }
-    
-    .empty-cell,
-    .subject-cell {
-        width: 160px;
-    }
+  .timetable {
+    min-width: 900px;
+  }
+
+  .empty-cell,
+  .subject-cell {
+    width: 160px;
+  }
 }
 
 @media (max-width: 768px) {
-    .button-area {
-        flex-direction: column;
-        align-items: flex-start;
-        gap: 15px;
-    }
-    
-    .button-area h3 {
-        font-size: 12px;
-    }
-    
-    .checkbox-group {
-        grid-template-columns: 1fr;
-    }
-    
-    .timetable-container {
-        padding: 20px;
-    }
-    
-    .time-cell {
-        width: 70px;
-    }
+  .button-area {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 15px;
+  }
+
+  .button-area h3 {
+    font-size: 12px;
+  }
+
+  .checkbox-group {
+    grid-template-columns: 1fr;
+  }
+
+  .timetable-container {
+    padding: 20px;
+  }
+
+  .time-cell {
+    width: 70px;
+  }
 }

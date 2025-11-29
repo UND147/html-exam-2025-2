@@ -1,0 +1,281 @@
+/* 출석체크 메인 컨테이너 */
+.attendance-container {
+  display: flex;
+  gap: 30px;
+  padding: 40px 60px;
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+/* 좌측 프로필 영역 (30%) */
+.profile-section {
+  flex: 3;
+  background: #1e1e1e;
+  border-radius: 16px;
+  padding: 30px;
+  border: 1px solid #2a2a2a;
+  height: fit-content;
+}
+
+.profile-image-wrapper {
+  text-align: center;
+  margin-bottom: 25px;
+}
+
+.profile-image {
+  width: 150px;
+  height: 150px;
+  border-radius: 16px;
+  object-fit: cover;
+  border: 4px solid #3b82f6;
+  margin-bottom: 15px;
+}
+
+.profile-buttons {
+  display: flex;
+  gap: 10px;
+  justify-content: center;
+  margin-top: 15px;
+}
+
+.profile-buttons button {
+  padding: 8px 16px;
+  background: #2a2a2a;
+  color: #d1d5db;
+  border: 1px solid #3a3a3a;
+  border-radius: 8px;
+  font-size: 13px;
+  cursor: pointer;
+  transition: all 0.3s;
+  margin: 0;
+}
+
+.profile-buttons button:hover {
+  background: #3a3a3a;
+  color: #ffffff;
+}
+
+.profile-info {
+  margin-top: 25px;
+}
+
+.profile-info-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 0;
+  border-bottom: 1px solid #2a2a2a;
+}
+
+.profile-info-item:last-child {
+  border-bottom: none;
+}
+
+.profile-info-label {
+  color: #9ca3af;
+  font-size: 14px;
+}
+
+.profile-info-value {
+  color: #ffffff;
+  font-size: 16px;
+  font-weight: 600;
+}
+
+.profile-info-value.highlight {
+  color: #3b82f6;
+}
+
+/* 우측 출석 영역 (70%) */
+.attendance-section {
+  flex: 7;
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+}
+
+/* 명언 카드 */
+.quote-card {
+  background: linear-gradient(135deg, #1e1e1e 0%, #2a2a2a 100%);
+  border-radius: 16px;
+  padding: 35px;
+  border: 1px solid #3a3a3a;
+  position: relative;
+  overflow: hidden;
+}
+
+.quote-card::before {
+  content: '"';
+  position: absolute;
+  top: 10px;
+  left: 20px;
+  font-size: 80px;
+  color: #3b82f6;
+  opacity: 0.1;
+  font-family: Georgia, serif;
+}
+
+.quote-text {
+  font-size: 18px;
+  line-height: 1.8;
+  color: #e5e7eb;
+  margin-bottom: 15px;
+  position: relative;
+  z-index: 1;
+}
+
+.quote-author {
+  text-align: right;
+  color: #9ca3af;
+  font-size: 14px;
+  font-style: italic;
+}
+
+/* 출석 버튼 카드 */
+.attendance-button-card {
+  background: #1e1e1e;
+  border-radius: 16px;
+  padding: 30px;
+  border: 1px solid #2a2a2a;
+  text-align: center;
+}
+
+.attendance-date {
+  color: #9ca3af;
+  font-size: 14px;
+  margin-bottom: 20px;
+}
+
+#attendanceBtn {
+  padding: 18px 50px;
+  background: linear-gradient(135deg, #3b82f6 0%, #2563eb 100%);
+  color: #ffffff;
+  border: none;
+  border-radius: 12px;
+  font-size: 18px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s;
+  box-shadow: 0 4px 15px rgba(59, 130, 246, 0.3);
+  margin: 0;
+}
+
+#attendanceBtn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(59, 130, 246, 0.4);
+}
+
+#attendanceBtn:disabled {
+  background: #2a2a2a;
+  color: #6b7280;
+  cursor: not-allowed;
+  transform: none;
+  box-shadow: none;
+}
+
+.attendance-message {
+  margin-top: 15px;
+  font-size: 14px;
+  color: #9ca3af;
+}
+
+.attendance-message.success {
+  color: #34d399;
+}
+
+/* 출석 리스트 카드 */
+.attendance-list-card {
+  background: #1e1e1e;
+  border-radius: 16px;
+  padding: 30px;
+  border: 1px solid #2a2a2a;
+}
+
+.attendance-list-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+  padding-bottom: 15px;
+  border-bottom: 1px solid #2a2a2a;
+}
+
+.attendance-list-title {
+  font-size: 18px;
+  font-weight: 600;
+  color: #ffffff;
+}
+
+.attendance-count {
+  color: #3b82f6;
+  font-size: 14px;
+}
+
+.attendance-list {
+  max-height: 400px;
+  overflow-y: auto;
+}
+
+.attendance-item {
+  display: flex;
+  align-items: center;
+  padding: 15px;
+  background: #0a0a0a;
+  border-radius: 10px;
+  margin-bottom: 10px;
+  transition: all 0.3s;
+}
+
+.attendance-item:hover {
+  background: #1a1a1a;
+  transform: translateX(5px);
+}
+
+.attendance-rank {
+  width: 40px;
+  height: 40px;
+  background: #2a2a2a;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 600;
+  color: #9ca3af;
+  margin-right: 15px;
+  font-size: 14px;
+}
+
+.attendance-rank.first {
+  background: linear-gradient(135deg, #fbbf24 0%, #f59e0b 100%);
+  color: #ffffff;
+}
+
+.attendance-rank.second {
+  background: linear-gradient(135deg, #9ca3af 0%, #6b7280 100%);
+  color: #ffffff;
+}
+
+.attendance-rank.third {
+  background: linear-gradient(135deg, #f97316 0%, #ea580c 100%);
+  color: #ffffff;
+}
+
+.attendance-user-info {
+  flex: 1;
+}
+
+.attendance-nickname {
+  color: #ffffff;
+  font-size: 15px;
+  font-weight: 500;
+  margin-bottom: 4px;
+}
+
+.attendance-time {
+  color: #6b7280;
+  font-size: 13px;
+}
+/* 숨겨진 파일 입력 */
+#profileImageInput {
+  display: none;
+}
