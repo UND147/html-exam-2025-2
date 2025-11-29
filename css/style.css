@@ -2,7 +2,7 @@
    기본 스타일 (Body & Scrollbar)
    ========================================== */
 body {
-    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+    font-family: 'Pretendard', -apple-system, BlinkMacSystemFont, 'Apple SD Gothic Neo', 'Malgun Gothic', sans-serif;
     --featured-img: linear-gradient(180deg,#fff,#262626);
     --bg-blend-mode: overlay;
     background-position: top 58px center;
@@ -43,7 +43,6 @@ body {
     align-items: center;
     justify-content: space-between;
     font-size: 12px;
-    font-family: 'Apple SD Gothic Neo', 'Malgun Gothic', '맑은 고딕', arial, sans-serif;
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3); 
 }
 
