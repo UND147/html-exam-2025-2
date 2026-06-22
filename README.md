@@ -33,14 +33,6 @@ html-exam-2025-2/
 └── pdf/        # 자료실에서 제공하는 강의 자료
 ```
 
-## ▶ 실행 방법
-정적 사이트이므로 별도 빌드가 필요 없습니다.
-```bash
-# 방법 1) index.html 을 브라우저로 직접 열기
-# 방법 2) 로컬 서버 (VS Code Live Server 등)
-npx serve .      # 또는 python -m http.server
-```
-
 ## ✨ 특징
 - 외부 라이브러리 의존 없이 핵심 기능을 **바닐라 JS로 직접 구현**
 - `localStorage` 를 활용한 클라이언트 사이드 데이터 영속화 (출석·시간표)
