@@ -1,0 +1,10 @@
+# 에디터/IDE 설정
+.vscode/
+
+# OS 생성 파일
+.DS_Store
+Thumbs.db
+
+# 로그·임시
+*.log
+tmp/
